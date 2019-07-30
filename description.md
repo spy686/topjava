@@ -65,4 +65,5 @@ Hibernate, делаем конверторы для типов LocalDateTime (Ja
 -  form-login. Spring Security Taglib
 -  Handler interceptor
 -  Spring Exception Handling
--  Деплой в Heroku
+-  <a href="https://drive.google.com/file/d/0B9Ye2auQ_NsFZkpVM19QWFBOQ2c/view">Деплой в Heroku</a>
+
