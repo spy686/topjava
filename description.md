@@ -67,3 +67,4 @@ Hibernate, делаем конверторы для типов LocalDateTime (Ja
 -  Spring Exception Handling
 -  <a href="https://drive.google.com/file/d/0B9Ye2auQ_NsFZkpVM19QWFBOQ2c/view">Деплой в Heroku</a>
 
+https://drive.google.com/open?id=0B9Ye2auQ_NsFZkpVM19QWFBOQ2c

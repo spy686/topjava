@@ -60,6 +60,7 @@ public class ModelMatcher<T, R> {
                 });
     }
 
+    @SafeVarargs
     public final ResultMatcher contentListMatcher(T... expected) {
         return contentListMatcher(Arrays.asList(expected));
     }
