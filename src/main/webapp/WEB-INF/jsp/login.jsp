@@ -25,7 +25,6 @@
                         <button type="submit" class="btn btn-success"><fmt:message key="app.login"/></button>
                     </form:form>
                 </li>
-                <jsp:include page="fragments/lang.jsp"/>
             </ul>
         </div>
     </div>

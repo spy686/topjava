@@ -21,6 +21,7 @@
                         </sec:authorize>
                     </form:form>
                 </li>
+                <jsp:include page="lang.jsp"/>
             </ul>
         </div>
     </div>
