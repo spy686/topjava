@@ -21,7 +21,7 @@
                         </sec:authorize>
                     </form:form>
                 </li>
-                <jsp:include page="lang.jsp"/>
+                <jsp:include page="lang_old.jsp"/>
             </ul>
         </div>
     </div>

@@ -6,7 +6,7 @@
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-        <a href="<c:url value='/meals'/>" class="navbar-brand"><fmt:message key="app.title"/></a>
+        <jsp:include page="appTitle.jsp"/>
 
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">

@@ -10,7 +10,8 @@
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-        <div class="navbar-header navbar-brand"><fmt:message key="app.title"/></div>
+        <jsp:include page="fragments/appTitle.jsp"/>
+
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -27,7 +28,9 @@
                 </li>
             </ul>
         </div>
+
     </div>
+
 </div>
 
 <div class="jumbotron">
