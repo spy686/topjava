@@ -18,30 +18,35 @@ import java.util.List;
  * on 14.12.2015.
  */
 @Controller
-public class AbstractUserMealController {
-    protected static final LoggerWrapper LOG = LoggerWrapper.get(AbstractUserMealController.class);
+public class AbstractAccountsController {
+    protected static final LoggerWrapper LOG = LoggerWrapper.get(AbstractAccountsController.class);
 
+    @Deprecated
     @Autowired
     protected UserMealService service;
 
+    @Deprecated
     public UserMeal get(int id) {
         int userId = LoggedUser.id();
         LOG.info("get meal {} for User {}", id, userId);
         return service.get(id, userId);
     }
 
+    @Deprecated
     public void delete(int id) {
         int userId = LoggedUser.id();
         LOG.info("delete meal {} for User {}", id, userId);
         service.delete(id, userId);
     }
 
+    @Deprecated
     public List<UserMealWithExceed> getAll() {
         int userId = LoggedUser.id();
         LOG.info("getAll for User {}", userId);
         return UserMealsUtil.getWithExceeded(service.getAll(userId), LoggedUser.getCaloriesPerDay());
     }
 
+    @Deprecated
     public void update(UserMeal meal, int id) {
         meal.setId(id);
         int userId = LoggedUser.id();
@@ -49,6 +54,7 @@ public class AbstractUserMealController {
         service.update(meal, userId);
     }
 
+    @Deprecated
     public UserMeal create(UserMeal meal) {
         meal.setId(null);
         int userId = LoggedUser.id();
@@ -56,6 +62,7 @@ public class AbstractUserMealController {
         return service.save(meal, userId);
     }
 
+    @Deprecated
     public List<UserMealWithExceed> getBetween(LocalDate startDate, LocalTime startTime, LocalDate endDate, LocalTime endTime) {
         int userId = LoggedUser.id();
         LOG.info("getBetween dates {} - {} for time {} - {} for User {}", startDate, endDate, startTime, endTime, userId);

@@ -14,7 +14,7 @@
 <div class="jumbotron">
     <div class="container">
         <div class="shadow">
-            <h3><fmt:message key="meals.title"/></h3>
+            <h3><fmt:message key="accounts.title"/></h3>
 
             <div class="view-box">
 
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </form:form>
-                <a class="btn btn-sm btn-info" id="add"><fmt:message key="meals.add"/></a>
+                <a class="btn btn-sm btn-info" id="add"><fmt:message key="accounts.add"/></a>
                 <table class="table table-striped display" id="datatable">
                     <thead>
                     <tr>
@@ -74,7 +74,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h2 class="modal-title"><fmt:message key="meals.edit"/></h2>
+                <h2 class="modal-title"><fmt:message key="accounts.edit"/></h2>
             </div>
             <div class="modal-body">
                 <form:form class="form-horizontal" method="post" id="detailsForm">

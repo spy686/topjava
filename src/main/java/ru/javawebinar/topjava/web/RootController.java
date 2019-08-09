@@ -25,7 +25,7 @@ public class RootController extends AbstractUserController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String root() {
-        return "redirect:meals";
+        return "redirect:accounts";
     }
 
     //    @Secured("ROLE_ADMIN")
@@ -35,7 +35,7 @@ public class RootController extends AbstractUserController {
         return "userList";
     }
 
-    @RequestMapping(value = "/meals", method = RequestMethod.GET)
+    @RequestMapping(value = "/accounts", method = RequestMethod.GET)
     public String mealList() {
         return "mealList";
     }
@@ -63,7 +63,7 @@ public class RootController extends AbstractUserController {
                 super.update(userTo);
                 LoggedUser.get().update(userTo);
                 status.setComplete();
-                return "redirect:meals";
+                return "redirect:accounts";
             } catch (DataIntegrityViolationException ex) {
                 result.rejectValue("email", "error.user", "user with this email already present in application");
             }

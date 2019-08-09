@@ -19,24 +19,28 @@ import java.util.List;
  * on 18.12.2015.
  */
 @RestController
-@RequestMapping(value = "/ajax/profile/meals")
-public class UserMealAjaxController extends AbstractUserMealController {
+@RequestMapping(value = "/ajax/profile/accounts")
+public class AccountsAjaxController extends AbstractAccountsController {
 
+    @Deprecated
     @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<UserMealWithExceed> getAll() {
         return super.getAll();
     }
 
+    @Deprecated
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public UserMeal get(@PathVariable("id") int id) {
         return super.get(id);
     }
 
+    @Deprecated
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable("id") int id) {
         super.delete(id);
     }
 
+    @Deprecated
     @RequestMapping(method = RequestMethod.POST)
     public void updateOrCreate(@Valid UserMeal meal, BindingResult result, SessionStatus status) {
         if (result.hasErrors()) {
@@ -50,6 +54,7 @@ public class UserMealAjaxController extends AbstractUserMealController {
         }
     }
 
+    @Deprecated
     @RequestMapping(value = "/filter", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<UserMealWithExceed> getBetween(
             @RequestParam(value = "startDate", required = false) LocalDate startDate, @RequestParam(value = "startTime", required = false) LocalTime startTime,

@@ -35,7 +35,7 @@ public class RootControllerTest extends AbstractControllerTest {
     @Test
     public void testMealList() throws Exception {
         authorize(USER);
-        mockMvc.perform(get("/meals"))
+        mockMvc.perform(get("/accounts"))
                 .andDo(print())
                 .andExpect(view().name("mealList"))
                 .andExpect(forwardedUrl("/WEB-INF/jsp/mealList.jsp"));

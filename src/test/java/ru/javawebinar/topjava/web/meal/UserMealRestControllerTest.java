@@ -25,7 +25,7 @@ import static ru.javawebinar.topjava.model.BaseEntity.START_SEQ;
 
 public class UserMealRestControllerTest extends AbstractControllerTest {
 
-    public static final String REST_URL = UserMealRestController.REST_URL + '/';
+    public static final String REST_URL = AccountsRestController.REST_URL + '/';
 
     @Autowired
     private UserMealService service;

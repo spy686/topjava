@@ -19,36 +19,41 @@ import java.time.LocalTime;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = UserMealRestController.REST_URL, produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = AccountsRestController.REST_URL, produces = MediaType.APPLICATION_JSON_VALUE)
 
 /**
  * Created by Samusia
  * on 30.11.2015.
  */
 @Controller
-public class UserMealRestController extends AbstractUserMealController {
-    public static final String REST_URL = "/rest/profile/meals";
+public class AccountsRestController extends AbstractAccountsController {
+    public static final String REST_URL = "/rest/profile/accounts";
 
+    @Deprecated
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public UserMeal get(@PathVariable("id") int id) {
         return super.get(id);
     }
 
+    @Deprecated
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable("id") int id) {
         super.delete(id);
     }
 
+    @Deprecated
     @RequestMapping(method = RequestMethod.GET)
     public List<UserMealWithExceed> getAll() {
         return super.getAll();
     }
 
+    @Deprecated
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
     public void update(@RequestBody UserMeal meal, @PathVariable("id") int id) {
         super.update(meal, id);
     }
 
+    @Deprecated
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<UserMeal> createWithLocation(@RequestBody UserMeal meal) {
         UserMeal created = super.create(meal);
@@ -63,6 +68,7 @@ public class UserMealRestController extends AbstractUserMealController {
         return new ResponseEntity<>(created, httpHeaders, HttpStatus.CREATED);
     }
 
+    @Deprecated
     @RequestMapping(value = "/between", method = RequestMethod.GET)
     public List<UserMealWithExceed> getBetween(
             @RequestParam(value = "startDateTime") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime startDateTime,
@@ -70,6 +76,7 @@ public class UserMealRestController extends AbstractUserMealController {
         return super.getBetween(startDateTime.toLocalDate(), startDateTime.toLocalTime(), endDateTime.toLocalDate(), endDateTime.toLocalTime());
     }
 
+    @Deprecated
     @RequestMapping(value = "/filter", method = RequestMethod.GET)
     public List<UserMealWithExceed> getBetween(
             @RequestParam(value = "startDate", required = false) LocalDate startDate, @RequestParam(value = "startTime", required = false) LocalTime startTime,
