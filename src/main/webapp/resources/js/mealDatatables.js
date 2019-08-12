@@ -35,6 +35,9 @@ $(function () {
                 "data": "description"
             },
             {
+                "data": "description2"
+            },
+            {
                 "data": "calories"
             },
             {

@@ -29,6 +29,7 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
     private static final RowMapper<UserMeal> ROW_MAPPER =
             (rs, rowNum) ->
                     new UserMeal(rs.getInt("id"), rs.getTimestamp("date_time").toLocalDateTime(),
+                            rs.getString("description"),
                             rs.getString("description"), rs.getInt("calories"));
 
     @Autowired
@@ -52,6 +53,7 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
         MapSqlParameterSource map = new MapSqlParameterSource()
                 .addValue("id", userMeal.getId())
                 .addValue("description", userMeal.getDescription())
+                .addValue("description2", userMeal.getDescription2())
                 .addValue("calories", userMeal.getCalories())
                 .addValue("date_time", Timestamp.valueOf(userMeal.getDateTime()))
                 .addValue("user_id", userId);

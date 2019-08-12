@@ -35,9 +35,10 @@ public class RootController extends AbstractUserController {
         return "userList";
     }
 
+    // open accountsMain.jsp [/accounts]
     @RequestMapping(value = "/accounts", method = RequestMethod.GET)
     public String mealList() {
-        return "mealList";
+        return "accountsMain";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)

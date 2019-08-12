@@ -31,15 +31,15 @@ public class InMemoryUserMealRepositoryImpl implements UserMealRepository {
     private AtomicInteger counter = new AtomicInteger(0);
 
     {
-        save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 10, 0), "Завтрак", 500), USER_ID);
-        save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 13, 0), "Обед", 1000), USER_ID);
-        save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 20, 0), "Ужин", 500), USER_ID);
-        save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 31, 10, 0), "Завтрак", 1000), USER_ID);
-        save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 31, 13, 0), "Обед", 500), USER_ID);
-        save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 31, 20, 0), "Ужин", 510), USER_ID);
+        save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 10, 0), "Завтрак", "Завтрак", 500), USER_ID);
+        save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 13, 0), "Завтрак", "Обед", 1000), USER_ID);
+        save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 20, 0), "Завтрак", "Ужин", 500), USER_ID);
+        save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 31, 10, 0), "Завтрак", "Завтрак", 1000), USER_ID);
+        save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 31, 13, 0), "Завтрак", "Обед", 500), USER_ID);
+        save(new UserMeal(LocalDateTime.of(2015, Month.MAY, 31, 20, 0), "Завтрак", "Ужин", 510), USER_ID);
 
-        save(new UserMeal(LocalDateTime.of(2015, Month.JUNE, 1, 14, 0), "Админ ланч", 510), ADMIN_ID);
-        save(new UserMeal(LocalDateTime.of(2015, Month.JUNE, 1, 21, 0), "Админ ужин", 1500), ADMIN_ID);
+        save(new UserMeal(LocalDateTime.of(2015, Month.JUNE, 1, 14, 0), "Завтрак", "Админ ланч", 510), ADMIN_ID);
+        save(new UserMeal(LocalDateTime.of(2015, Month.JUNE, 1, 21, 0), "Завтрак", "Админ ужин", 1500), ADMIN_ID);
     }
 
     @Override

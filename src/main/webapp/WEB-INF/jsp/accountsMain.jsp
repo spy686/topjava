@@ -51,18 +51,22 @@
                         </div>
                     </div>
                 </form:form>
+
                 <a class="btn btn-sm btn-info" id="add"><fmt:message key="accounts.add"/></a>
+
                 <table class="table table-striped display" id="datatable">
                     <thead>
                     <tr>
                         <th>Date</th>
                         <th>Description</th>
+                        <th>Description2</th>
                         <th>Calories</th>
                         <th></th>
                         <th></th>
                     </tr>
                     </thead>
                 </table>
+
             </div>
         </div>
     </div>
@@ -87,6 +91,7 @@
                             <input class="form-control" id="dateTime" name="dateTime" placeholder="Date">
                         </div>
                     </div>
+
                     <div class="form-group">
                         <label for="description" class="control-label col-xs-3">Description</label>
 
@@ -95,6 +100,16 @@
                                    placeholder="Description">
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <label for="description2" class="control-label col-xs-3">Description2</label>
+
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="description2" name="description2"
+                                   placeholder="Description2">
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label for="calories" class="control-label col-xs-3">Calories</label>
 
@@ -103,11 +118,13 @@
                                    placeholder="2000">
                         </div>
                     </div>
+
                     <div class="form-group">
                         <div class="col-xs-offset-3 col-xs-9">
                             <button type="submit" class="btn btn-primary">Save</button>
                         </div>
                     </div>
+
                 </form:form>
             </div>
         </div>

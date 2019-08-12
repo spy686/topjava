@@ -38,6 +38,6 @@ public class RootControllerTest extends AbstractControllerTest {
         mockMvc.perform(get("/accounts"))
                 .andDo(print())
                 .andExpect(view().name("mealList"))
-                .andExpect(forwardedUrl("/WEB-INF/jsp/mealList.jsp"));
+                .andExpect(forwardedUrl("/WEB-INF/jsp/accountsMain.jsp"));
     }
 }

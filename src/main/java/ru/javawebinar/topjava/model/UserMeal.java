@@ -40,6 +40,10 @@ public class UserMeal extends BaseEntity {
     @NotEmpty
     protected String description;
 
+    @Column(name = "description2", nullable = false)
+    @NotEmpty
+    protected String description2;
+
     @Column(name = "calories")
     @Range(min = 10, max = 5000)
     @NotNull
@@ -52,14 +56,15 @@ public class UserMeal extends BaseEntity {
     public UserMeal() {
     }
 
-    public UserMeal(LocalDateTime dateTime, String description, int calories) {
-        this(null, dateTime, description, calories);
+    public UserMeal(LocalDateTime dateTime, String description, String description2, int calories) {
+        this(null, dateTime, description, description2, calories);
     }
 
-    public UserMeal(Integer id, LocalDateTime dateTime, String description, int calories) {
+    public UserMeal(Integer id, LocalDateTime dateTime, String description, String description2, int calories) {
         super(id);
         this.dateTime = dateTime;
         this.description = description;
+        this.description2 = description2;
         this.calories = calories;
     }
 
@@ -69,6 +74,10 @@ public class UserMeal extends BaseEntity {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getDescription2() {
+        return description2;
     }
 
     public int getCalories() {
@@ -81,6 +90,10 @@ public class UserMeal extends BaseEntity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setDescription2(String description2) {
+        this.description2 = description2;
     }
 
     public void setCalories(Integer calories) {
@@ -101,6 +114,7 @@ public class UserMeal extends BaseEntity {
                 "id=" + id +
                 ", dateTime=" + dateTime +
                 ", description='" + description + '\'' +
+                ", description2='" + description2 + '\'' +
                 ", calories=" + calories +
                 '}';
     }
