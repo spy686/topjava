@@ -24,7 +24,7 @@ import java.time.LocalDateTime;
 //                "m.description=:desc where m.id=:id and m.user.id=:userId")
 })
 @Entity
-@Table(name = "meals")
+@Table(name = "meals_orig")
 public class UserMeal extends BaseEntity {
     public static final String GET = "UserMeal.get";
     public static final String ALL_SORTED = "UserMeal.getAll";
