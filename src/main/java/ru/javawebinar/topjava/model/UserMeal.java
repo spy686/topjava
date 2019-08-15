@@ -50,7 +50,7 @@ public class UserMeal extends BaseEntity {
     protected Integer calories;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "login", nullable = false)
     private User user;
 
     public UserMeal() {
