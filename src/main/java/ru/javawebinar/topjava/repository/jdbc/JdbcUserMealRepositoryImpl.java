@@ -43,7 +43,7 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
     @Autowired
     public JdbcUserMealRepositoryImpl(DataSource dataSource) {
         this.insertUserMeal = new SimpleJdbcInsert(dataSource)
-                .withTableName("meals_test")
+                .withTableName("accounts")
                 .usingGeneratedKeyColumns("id");
     }
 
@@ -63,7 +63,7 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
             userMeal.setId(newId.intValue());
         } else {
             if (namedParameterJdbcTemplate.update(
-                    "UPDATE meals_test SET description=:description, calories=:calories, date_time=:date_time " +
+                    "UPDATE accounts SET description=:description, calories=:calories, date_time=:date_time " +
                             " WHERE id=:id AND login=:login", map) == 0) {
                 return null;
             }
@@ -74,25 +74,25 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
     @Override
     @Transactional
     public boolean delete(int id, int userId) {
-        return jdbcTemplate.update("DELETE FROM meals_test WHERE id=? AND login=?", id, userId) != 0;
+        return jdbcTemplate.update("DELETE FROM accounts WHERE id=? AND login=?", id, userId) != 0;
     }
 
     @Override
     public UserMeal get(int id, int userId) {
         List<UserMeal> userMeals = jdbcTemplate.query(
-                "SELECT * FROM meals_test WHERE id = ? AND login = ?", ROW_MAPPER, id, userId);
+                "SELECT * FROM accounts WHERE id = ? AND login = ?", ROW_MAPPER, id, userId);
         return DataAccessUtils.singleResult(userMeals);
     }
 
     public List<UserMeal> getAll(int userId) {
         return jdbcTemplate.query(
-                "SELECT * FROM meals_test WHERE login=? ORDER BY date_time DESC", ROW_MAPPER, userId);
+                "SELECT * FROM accounts WHERE login=? ORDER BY date_time DESC", ROW_MAPPER, userId);
     }
 
     @Override
     public List<UserMeal> getBetween(LocalDateTime startDate, LocalDateTime endDate, int userId) {
         return jdbcTemplate.query(
-                "SELECT * FROM meals_test WHERE login=?  AND date_time BETWEEN  ? AND ? ORDER BY date_time DESC",
+                "SELECT * FROM accounts WHERE login=?  AND date_time BETWEEN  ? AND ? ORDER BY date_time DESC",
                 ROW_MAPPER, userId, Timestamp.valueOf(startDate), Timestamp.valueOf(endDate));
     }
 }
