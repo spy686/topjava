@@ -30,7 +30,10 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
             (rs, rowNum) ->
                     new UserMeal(rs.getInt("id"), rs.getTimestamp("date_time").toLocalDateTime(),
                             rs.getString("description"),
-                            rs.getString("description"), rs.getInt("calories"));
+                            rs.getString("description"),
+                            rs.getInt("calories"),
+                            rs.getString("login")
+                    );
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -56,6 +59,7 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
                 .addValue("description2", userMeal.getDescription2())
                 .addValue("calories", userMeal.getCalories())
                 .addValue("date_time", Timestamp.valueOf(userMeal.getDateTime()))
+                .addValue("login", userMeal.getLogin())
                 .addValue("user_id", userId);
 
         if (userMeal.isNew()) {

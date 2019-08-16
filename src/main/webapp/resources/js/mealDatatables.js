@@ -41,6 +41,9 @@ $(function () {
                 "data": "calories"
             },
             {
+                "data": "login"
+            },
+            {
                 "defaultContent": "",
                 "orderable": false,
                 "render": renderEditBtn

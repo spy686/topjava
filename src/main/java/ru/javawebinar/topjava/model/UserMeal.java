@@ -49,6 +49,10 @@ public class UserMeal extends BaseEntity {
     @NotNull
     protected Integer calories;
 
+    @Column(name = "login", nullable = false)
+    @NotEmpty
+    protected String login;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
@@ -56,16 +60,17 @@ public class UserMeal extends BaseEntity {
     public UserMeal() {
     }
 
-    public UserMeal(LocalDateTime dateTime, String description, String description2, int calories) {
-        this(null, dateTime, description, description2, calories);
+    public UserMeal(LocalDateTime dateTime, String description, String description2, int calories, String login) {
+        this(null, dateTime, description, description2, calories, login);
     }
 
-    public UserMeal(Integer id, LocalDateTime dateTime, String description, String description2, int calories) {
+    public UserMeal(Integer id, LocalDateTime dateTime, String description, String description2, int calories, String login) {
         super(id);
         this.dateTime = dateTime;
         this.description = description;
         this.description2 = description2;
         this.calories = calories;
+        this.login = login;
     }
 
     public LocalDateTime getDateTime() {
@@ -84,6 +89,10 @@ public class UserMeal extends BaseEntity {
         return calories;
     }
 
+    public String getLogin() {
+        return login;
+    }
+
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
     }
@@ -98,6 +107,10 @@ public class UserMeal extends BaseEntity {
 
     public void setCalories(Integer calories) {
         this.calories = calories;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public User getUser() {
@@ -116,6 +129,7 @@ public class UserMeal extends BaseEntity {
                 ", description='" + description + '\'' +
                 ", description2='" + description2 + '\'' +
                 ", calories=" + calories +
+                ", login=" + login +
                 '}';
     }
 }
