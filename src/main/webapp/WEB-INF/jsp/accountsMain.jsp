@@ -112,20 +112,20 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="calories" class="control-label col-xs-3">Calories</label>
-
-                        <div class="col-xs-9">
-                            <input type="number" class="form-control" id="calories" name="calories"
-                                   placeholder="2000">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         <label for="login" class="control-label col-xs-3">Login</label>
 
                         <div class="col-xs-9">
                             <input type="text" class="form-control" id="login" name="login"
                                    placeholder="Login">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calories" class="control-label col-xs-3">Calories</label>
+
+                        <div class="col-xs-9">
+                            <input type="number" class="form-control" id="calories" name="calories"
+                                   placeholder="2000">
                         </div>
                     </div>
 
