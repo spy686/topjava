@@ -17,12 +17,12 @@ import java.util.stream.Collectors;
 public class UserMealsUtil {
     // Possible For test
     public static final List<UserMeal> MEAL_LIST = Arrays.asList(
-            new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 10, 0), "Завтрак", "Завтрак", 500, "login"),
-            new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 13, 0), "Завтрак", "Обед", 1000, "login"),
-            new UserMeal(LocalDateTime.of(2015, Month.MAY, 30, 20, 0), "Завтрак", "Ужин", 500, "login"),
-            new UserMeal(LocalDateTime.of(2015, Month.MAY, 31, 10, 0), "Завтрак", "Завтрак", 1000, "login"),
-            new UserMeal(LocalDateTime.of(2015, Month.MAY, 31, 13, 0), "Завтрак", "Обед", 500, "login"),
-            new UserMeal(LocalDateTime.of(2015, Month.MAY, 31, 20, 0), "Завтрак", "Ужин", 510, "login")
+            new UserMeal(1, LocalDateTime.of(2015, Month.MAY, 30, 10, 0), "Завтрак", "Завтрак", 500, "login"),
+            new UserMeal(2, LocalDateTime.of(2015, Month.MAY, 30, 13, 0), "Завтрак", "Обед", 1000, "login"),
+            new UserMeal(3, LocalDateTime.of(2015, Month.MAY, 30, 20, 0), "Завтрак", "Ужин", 500, "login"),
+            new UserMeal(4, LocalDateTime.of(2015, Month.MAY, 31, 10, 0), "Завтрак", "Завтрак", 1000, "login"),
+            new UserMeal(5, LocalDateTime.of(2015, Month.MAY, 31, 13, 0), "Завтрак", "Обед", 500, "login"),
+            new UserMeal(6, LocalDateTime.of(2015, Month.MAY, 31, 20, 0), "Завтрак", "Ужин", 510, "login")
     );
 
     // Possible For test

@@ -23,6 +23,9 @@ $(function () {
         "info": true,
         "columns": [
             {
+                "data": "id"
+            },
+            {
                 "data": "dateTime",
                 "render": function (date, type, row) {
                     if (type == 'display') {

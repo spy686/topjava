@@ -60,10 +60,6 @@ public class UserMeal extends BaseEntity {
     public UserMeal() {
     }
 
-    public UserMeal(LocalDateTime dateTime, String description, String description2, int calories, String login) {
-        this(null, dateTime, description, description2, calories, login);
-    }
-
     public UserMeal(Integer id, LocalDateTime dateTime, String description, String description2, int calories, String login) {
         super(id);
         this.dateTime = dateTime;

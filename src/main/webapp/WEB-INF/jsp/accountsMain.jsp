@@ -57,6 +57,7 @@
                 <table class="table table-striped display" id="datatable">
                     <thead>
                     <tr>
+                        <th>#id</th>
                         <th>Date</th>
                         <th>Description</th>
                         <th>Description2</th>
@@ -83,7 +84,14 @@
             </div>
             <div class="modal-body">
                 <form:form class="form-horizontal" method="post" id="detailsForm">
-                    <input type="hidden" id="id" name="id">
+
+                    <div class="form-group">
+                        <label for="id" class="control-label col-xs-3">#id</label>
+
+                        <div class="col-xs-9">
+                            <input class="form-control" id="id" name="id" placeholder="#id">
+                        </div>
+                    </div>
 
                     <div class="form-group">
                         <label for="dateTime" class="control-label col-xs-3">Date</label>
@@ -112,20 +120,20 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="login" class="control-label col-xs-3">Login</label>
-
-                        <div class="col-xs-9">
-                            <input type="text" class="form-control" id="login" name="login"
-                                   placeholder="Login">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         <label for="calories" class="control-label col-xs-3">Calories</label>
 
                         <div class="col-xs-9">
                             <input type="number" class="form-control" id="calories" name="calories"
                                    placeholder="2000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login" class="control-label col-xs-3">Login</label>
+
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="login" name="login"
+                                   placeholder="Login">
                         </div>
                     </div>
 
