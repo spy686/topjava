@@ -17,12 +17,13 @@ import java.util.stream.Collectors;
 public class UserMealsUtil {
     // Possible For test
     public static final List<UserMeal> MEAL_LIST = Arrays.asList(
-            new UserMeal(1, LocalDateTime.of(2015, Month.MAY, 30, 10, 0), "Завтрак", "Завтрак", 500, "login"),
-            new UserMeal(2, LocalDateTime.of(2015, Month.MAY, 30, 13, 0), "Завтрак", "Обед", 1000, "login"),
-            new UserMeal(3, LocalDateTime.of(2015, Month.MAY, 30, 20, 0), "Завтрак", "Ужин", 500, "login"),
-            new UserMeal(4, LocalDateTime.of(2015, Month.MAY, 31, 10, 0), "Завтрак", "Завтрак", 1000, "login"),
-            new UserMeal(5, LocalDateTime.of(2015, Month.MAY, 31, 13, 0), "Завтрак", "Обед", 500, "login"),
-            new UserMeal(6, LocalDateTime.of(2015, Month.MAY, 31, 20, 0), "Завтрак", "Ужин", 510, "login")
+            new UserMeal(1, LocalDateTime.of(2015, Month.MAY, 30, 10, 0), "Завтрак", "Завтрак", 500, "login", "password")
+//            ,
+//            new UserMeal(2, LocalDateTime.of(2015, Month.MAY, 30, 13, 0), "Завтрак", "Обед", 1000, "login"),
+//            new UserMeal(3, LocalDateTime.of(2015, Month.MAY, 30, 20, 0), "Завтрак", "Ужин", 500, "login"),
+//            new UserMeal(4, LocalDateTime.of(2015, Month.MAY, 31, 10, 0), "Завтрак", "Завтрак", 1000, "login"),
+//            new UserMeal(5, LocalDateTime.of(2015, Month.MAY, 31, 13, 0), "Завтрак", "Обед", 500, "login"),
+//            new UserMeal(6, LocalDateTime.of(2015, Month.MAY, 31, 20, 0), "Завтрак", "Ужин", 510, "login", "password")
     );
 
     // Possible For test
@@ -48,7 +49,7 @@ public class UserMealsUtil {
     }
 
     public static UserMealWithExceed createWithExceed(UserMeal um, boolean exceeded) {
-        return new UserMealWithExceed(um.getId(), um.getDateTime(), um.getDescription(), um.getDescription2(), um.getCalories(), um.getLogin(), exceeded);
+        return new UserMealWithExceed(um.getId(), um.getDateTime(), um.getDescription(), um.getDescription2(), um.getCalories(), um.getLogin(), um.getPassword(), exceeded);
     }
 
     public static List<UserMealWithExceed> getFilteredWithExceededByCycle(List<UserMeal> mealList, LocalTime startTime, LocalTime endTime, int caloriesPerDay) {

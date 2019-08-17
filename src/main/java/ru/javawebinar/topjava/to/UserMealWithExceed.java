@@ -21,11 +21,9 @@ public class UserMealWithExceed {
 
     protected final String login;
 
-    protected final boolean exceed;
+    protected final String password;
 
-    public UserMealWithExceed(LocalDateTime dateTime, String description, String description2, int calories, String login, boolean exceed) {
-        this(null, dateTime, description, description2, calories, login, exceed);
-    }
+    protected final boolean exceed;
 
     public UserMealWithExceed(@JsonProperty("id") Integer id,
                               @JsonProperty("dateTime") LocalDateTime dateTime,
@@ -33,6 +31,7 @@ public class UserMealWithExceed {
                               @JsonProperty("description2") String description2,
                               @JsonProperty("calories") int calories,
                               @JsonProperty("login") String login,
+                              @JsonProperty("password") String password,
                               @JsonProperty("exceed") boolean exceed) {
         this.id = id;
         this.dateTime = dateTime;
@@ -40,6 +39,7 @@ public class UserMealWithExceed {
         this.description2 = description2;
         this.calories = calories;
         this.login = login;
+        this.password = password;
         this.exceed = exceed;
     }
 
@@ -67,6 +67,10 @@ public class UserMealWithExceed {
         return login;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
     public boolean isExceed() {
         return exceed;
     }
@@ -80,6 +84,7 @@ public class UserMealWithExceed {
                 ", description2='" + description2 + '\'' +
                 ", calories=" + calories +
                 ", login=" + login +
+                ", password=" + password +
                 ", exceed=" + exceed +
                 '}';
     }

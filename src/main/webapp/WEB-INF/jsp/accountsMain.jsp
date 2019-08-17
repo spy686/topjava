@@ -63,6 +63,7 @@
                         <th>Description2</th>
                         <th>Calories</th>
                         <th>Login</th>
+                        <th>Password</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -134,6 +135,15 @@
                         <div class="col-xs-9">
                             <input type="text" class="form-control" id="login" name="login"
                                    placeholder="Login">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="control-label col-xs-3">Password</label>
+
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="password" name="password"
+                                   placeholder="Password">
                         </div>
                     </div>
 

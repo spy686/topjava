@@ -47,6 +47,9 @@ $(function () {
                 "data": "login"
             },
             {
+                "data": "password"
+            },
+            {
                 "defaultContent": "",
                 "orderable": false,
                 "render": renderEditBtn
