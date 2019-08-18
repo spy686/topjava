@@ -33,7 +33,8 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
                             rs.getString("description"),
                             rs.getInt("calories"),
                             rs.getString("login"),
-                            rs.getString("password")
+                            rs.getString("password"),
+                            rs.getInt("vk_id")
                     );
 
     @Autowired
@@ -61,7 +62,8 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
                 .addValue("calories", userMeal.getCalories())
                 .addValue("date_time", Timestamp.valueOf(userMeal.getDateTime()))
                 .addValue("login", userMeal.getLogin())
-                .addValue("password", userMeal.getLogin())
+                .addValue("password", userMeal.getPassword())
+                .addValue("vk_id", userMeal.getVkId())
                 .addValue("user_id", userId);
 
         if (userMeal.isNew()) {

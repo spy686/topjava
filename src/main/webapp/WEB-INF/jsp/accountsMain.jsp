@@ -64,6 +64,7 @@
                         <th>Calories</th>
                         <th>Login</th>
                         <th>Password</th>
+                        <th>vk_id</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -144,6 +145,15 @@
                         <div class="col-xs-9">
                             <input type="text" class="form-control" id="password" name="password"
                                    placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vk_id" class="control-label col-xs-3">vk_id</label>
+
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="vk_id" name="vk_id"
+                                   placeholder="vk_id">
                         </div>
                     </div>
 

@@ -50,6 +50,9 @@ $(function () {
                 "data": "password"
             },
             {
+                "data": "vk_id"
+            },
+            {
                 "defaultContent": "",
                 "orderable": false,
                 "render": renderEditBtn

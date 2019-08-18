@@ -57,6 +57,10 @@ public class UserMeal extends BaseEntity {
     @NotEmpty
     protected String password;
 
+    @Column(name = "vk_id")
+    @NotNull
+    protected Integer vk_id;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
@@ -71,7 +75,8 @@ public class UserMeal extends BaseEntity {
             String description2,
             int calories,
             String login,
-            String password) {
+            String password,
+            int vk_id) {
         super(id);
         this.dateTime = dateTime;
         this.description = description;
@@ -79,6 +84,7 @@ public class UserMeal extends BaseEntity {
         this.calories = calories;
         this.login = login;
         this.password = password;
+        this.vk_id = vk_id;
     }
 
     public LocalDateTime getDateTime() {
@@ -105,6 +111,10 @@ public class UserMeal extends BaseEntity {
         return password;
     }
 
+    public int getVkId() {
+        return vk_id;
+    }
+
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
     }
@@ -129,6 +139,10 @@ public class UserMeal extends BaseEntity {
         this.password = password;
     }
 
+    public void setVkId(int vk_id) {
+        this.vk_id = vk_id;
+    }
+
     public User getUser() {
         return user;
     }
@@ -147,6 +161,7 @@ public class UserMeal extends BaseEntity {
                 ", calories=" + calories +
                 ", login=" + login +
                 ", password=" + password +
+                ", vk_id=" + vk_id +
                 '}';
     }
 }
