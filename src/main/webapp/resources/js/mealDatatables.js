@@ -53,6 +53,9 @@ $(function () {
                 "data": "vk_id"
             },
             {
+                "data": "phone"
+            },
+            {
                 "defaultContent": "",
                 "orderable": false,
                 "render": renderEditBtn
