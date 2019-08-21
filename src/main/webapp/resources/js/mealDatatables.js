@@ -59,6 +59,9 @@ $(function () {
                 "data": "mail"
             },
             {
+                "data": "userName"
+            },
+            {
                 "defaultContent": "",
                 "orderable": false,
                 "render": renderEditBtn

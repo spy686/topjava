@@ -67,6 +67,7 @@
                         <th>vk_id</th>
                         <th>Phone</th>
                         <th>Mail</th>
+                        <th>User Name</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -174,6 +175,15 @@
                         <div class="col-xs-9">
                             <input type="text" class="form-control" id="mail" name="mail"
                                    placeholder="Mail">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userName" class="control-label col-xs-3">User Name</label>
+
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="userName" name="userName"
+                                   placeholder="User Name">
                         </div>
                     </div>
 
