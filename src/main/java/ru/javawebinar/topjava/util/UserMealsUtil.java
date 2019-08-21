@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class UserMealsUtil {
     // Possible For test
     public static final List<UserMeal> MEAL_LIST = Arrays.asList(
-            new UserMeal(1, LocalDateTime.of(2015, Month.MAY, 30, 10, 0), "Завтрак", "Завтрак", 500, "login", "password", 123, "phone")
+            new UserMeal(1, LocalDateTime.of(2015, Month.MAY, 30, 10, 0), "Завтрак", "Завтрак", 500, "login", "password", 123, "phone", "mail")
 //            ,
 //            new UserMeal(2, LocalDateTime.of(2015, Month.MAY, 30, 13, 0), "Завтрак", "Обед", 1000, "login"),
 //            new UserMeal(3, LocalDateTime.of(2015, Month.MAY, 30, 20, 0), "Завтрак", "Ужин", 500, "login"),
@@ -59,6 +59,7 @@ public class UserMealsUtil {
                 um.getPassword(),
                 um.getVkId(),
                 um.getPhone(),
+                um.getMail(),
                 exceeded);
     }
 

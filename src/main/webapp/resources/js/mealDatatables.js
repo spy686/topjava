@@ -56,6 +56,9 @@ $(function () {
                 "data": "phone"
             },
             {
+                "data": "mail"
+            },
+            {
                 "defaultContent": "",
                 "orderable": false,
                 "render": renderEditBtn

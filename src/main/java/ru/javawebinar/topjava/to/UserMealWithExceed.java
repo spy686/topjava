@@ -27,6 +27,8 @@ public class UserMealWithExceed {
 
     protected final String phone;
 
+    protected final String mail;
+
     protected final boolean exceed;
 
     public UserMealWithExceed(@JsonProperty("id") Integer id,
@@ -38,6 +40,7 @@ public class UserMealWithExceed {
                               @JsonProperty("password") String password,
                               @JsonProperty("vk_id") int vk_id,
                               @JsonProperty("phone") String phone,
+                              @JsonProperty("mail") String mail,
                               @JsonProperty("exceed") boolean exceed) {
         this.id = id;
         this.dateTime = dateTime;
@@ -48,6 +51,7 @@ public class UserMealWithExceed {
         this.password = password;
         this.vk_id = vk_id;
         this.phone = phone;
+        this.mail = mail;
         this.exceed = exceed;
     }
 
@@ -87,6 +91,10 @@ public class UserMealWithExceed {
         return phone;
     }
 
+    public String getMail() {
+        return mail;
+    }
+
     public boolean isExceed() {
         return exceed;
     }
@@ -103,6 +111,7 @@ public class UserMealWithExceed {
                 ", password=" + password +
                 ", vk_id=" + vk_id +
                 ", phone=" + phone +
+                ", mail=" + mail +
                 ", exceed=" + exceed +
                 '}';
     }
