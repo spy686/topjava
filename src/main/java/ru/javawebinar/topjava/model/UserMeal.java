@@ -59,7 +59,7 @@ public class UserMeal extends BaseEntity {
 
     @Column(name = "vk_id")
     @NotNull
-    protected Integer vk_id;
+    protected Integer vkId;
 
     @Column(name = "phone", nullable = false)
     @NotEmpty
@@ -88,7 +88,7 @@ public class UserMeal extends BaseEntity {
             int calories,
             String login,
             String password,
-            int vk_id,
+            int vkId,
             String phone,
             String mail,
             String userName) {
@@ -99,7 +99,7 @@ public class UserMeal extends BaseEntity {
         this.calories = calories;
         this.login = login;
         this.password = password;
-        this.vk_id = vk_id;
+        this.vkId = vkId;
         this.phone = phone;
         this.mail = mail;
         this.userName = userName;
@@ -130,7 +130,7 @@ public class UserMeal extends BaseEntity {
     }
 
     public int getVkId() {
-        return vk_id;
+        return vkId;
     }
 
     public String getPhone() {
@@ -169,8 +169,8 @@ public class UserMeal extends BaseEntity {
         this.password = password;
     }
 
-    public void setVkId(int vk_id) {
-        this.vk_id = vk_id;
+    public void setVkId(int vkId) {
+        this.vkId = vkId;
     }
 
     public void setPhone(String phone) {
@@ -204,10 +204,10 @@ public class UserMeal extends BaseEntity {
                 ", calories=" + calories +
                 ", login=" + login +
                 ", password=" + password +
-                ", vk_id=" + vk_id +
+                ", vk_id=" + vkId +
                 ", phone=" + phone +
                 ", mail=" + mail +
-                ", userName=" + userName +
+                ", user_name=" + userName +
                 '}';
     }
 }

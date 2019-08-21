@@ -23,7 +23,7 @@ public class UserMealWithExceed {
 
     protected final String password;
 
-    protected final int vk_id;
+    protected final int vkId;
 
     protected final String phone;
 
@@ -40,7 +40,7 @@ public class UserMealWithExceed {
                               @JsonProperty("calories") int calories,
                               @JsonProperty("login") String login,
                               @JsonProperty("password") String password,
-                              @JsonProperty("vk_id") int vk_id,
+                              @JsonProperty("vkId") int vkId,
                               @JsonProperty("phone") String phone,
                               @JsonProperty("mail") String mail,
                               @JsonProperty("userName") String userName,
@@ -52,7 +52,7 @@ public class UserMealWithExceed {
         this.calories = calories;
         this.login = login;
         this.password = password;
-        this.vk_id = vk_id;
+        this.vkId = vkId;
         this.phone = phone;
         this.mail = mail;
         this.userName = userName;
@@ -88,7 +88,7 @@ public class UserMealWithExceed {
     }
 
     public int getVkId() {
-        return vk_id;
+        return vkId;
     }
 
     public String getPhone() {
@@ -117,7 +117,7 @@ public class UserMealWithExceed {
                 ", calories=" + calories +
                 ", login=" + login +
                 ", password=" + password +
-                ", vk_id=" + vk_id +
+                ", vk_id=" + vkId +
                 ", phone=" + phone +
                 ", mail=" + mail +
                 ", userName=" + userName +

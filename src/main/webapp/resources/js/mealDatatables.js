@@ -50,7 +50,7 @@ $(function () {
                 "data": "password"
             },
             {
-                "data": "vk_id"
+                "data": "vkId"
             },
             {
                 "data": "phone"

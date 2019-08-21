@@ -36,7 +36,7 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
                             rs.getInt("calories"),
                             rs.getString("login"),
                             rs.getString("password"),
-                            rs.getInt("vk_id"),
+                            rs.getInt("vkId"),
                             rs.getString("phone"),
                             rs.getString("mail"),
                             rs.getString("userName")
@@ -68,7 +68,7 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
                 .addValue("date_time", Timestamp.valueOf(userMeal.getDateTime()))
                 .addValue("login", userMeal.getLogin())
                 .addValue("password", userMeal.getPassword())
-                .addValue("vk_id", userMeal.getVkId())
+                .addValue("vkId", userMeal.getVkId())
                 .addValue("phone", userMeal.getPhone())
                 .addValue("mail", userMeal.getMail())
                 .addValue("userName", userMeal.getUserName())

@@ -152,10 +152,10 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="vk_id" class="control-label col-xs-3">vk_id</label>
+                        <label for="vkId" class="control-label col-xs-3">vk_id</label>
 
                         <div class="col-xs-9">
-                            <input type="text" class="form-control" id="vk_id" name="vk_id"
+                            <input type="text" class="form-control" id="vkId" name="vkId"
                                    placeholder="vk_id">
                         </div>
                     </div>
