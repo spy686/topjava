@@ -62,6 +62,9 @@ $(function () {
                 "data": "userName"
             },
             {
+                "data": "status"
+            },
+            {
                 "defaultContent": "",
                 "orderable": false,
                 "render": renderEditBtn

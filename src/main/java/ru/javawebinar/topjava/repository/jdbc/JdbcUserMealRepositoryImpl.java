@@ -39,7 +39,8 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
                             rs.getInt("vkId"),
                             rs.getString("phone"),
                             rs.getString("mail"),
-                            rs.getString("userName")
+                            rs.getString("userName"),
+                            rs.getString("status")
                     );
 
     @Autowired
@@ -72,6 +73,7 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
                 .addValue("phone", userMeal.getPhone())
                 .addValue("mail", userMeal.getMail())
                 .addValue("userName", userMeal.getUserName())
+                .addValue("status", userMeal.getStatus())
                 .addValue("user_id", userId);
 
         if (userMeal.isNew()) {

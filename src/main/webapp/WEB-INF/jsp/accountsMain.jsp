@@ -68,6 +68,7 @@
                         <th>Phone</th>
                         <th>Mail</th>
                         <th>User Name</th>
+                        <th>Status</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -184,6 +185,15 @@
                         <div class="col-xs-9">
                             <input type="text" class="form-control" id="userName" name="userName"
                                    placeholder="User Name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status" class="control-label col-xs-3">Status</label>
+
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="status" name="status"
+                                   placeholder="Status">
                         </div>
                     </div>
 
