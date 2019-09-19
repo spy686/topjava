@@ -65,6 +65,9 @@ $(function () {
                 "data": "status"
             },
             {
+                "data": "appId"
+            },
+            {
                 "defaultContent": "",
                 "orderable": false,
                 "render": renderEditBtn

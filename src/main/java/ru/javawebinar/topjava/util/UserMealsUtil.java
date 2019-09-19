@@ -27,7 +27,8 @@ public class UserMealsUtil {
                     "phone",
                     "mail",
                     "userName",
-                    "status")
+                    "status",
+                    232424)
 //            ,
 //            new UserMeal(2, LocalDateTime.of(2015, Month.MAY, 30, 13, 0), "Завтрак", "Обед", 1000, "login"),
 //            new UserMeal(3, LocalDateTime.of(2015, Month.MAY, 30, 20, 0), "Завтрак", "Ужин", 500, "login"),
@@ -72,6 +73,7 @@ public class UserMealsUtil {
                 um.getMail(),
                 um.getUserName(),
                 um.getStatus(),
+                um.getAppId(),
                 exceeded);
     }
 

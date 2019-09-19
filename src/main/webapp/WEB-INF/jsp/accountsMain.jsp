@@ -69,6 +69,7 @@
                         <th>Mail</th>
                         <th>User Name</th>
                         <th>Status</th>
+                        <th>app_id</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -194,6 +195,15 @@
                         <div class="col-xs-9">
                             <input type="text" class="form-control" id="status" name="status"
                                    placeholder="Status">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appId" class="control-label col-xs-3">app_id</label>
+
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="appId" name="appId"
+                                   placeholder="app_id">
                         </div>
                     </div>
 

@@ -33,6 +33,8 @@ public class UserMealWithExceed {
 
     protected final String status;
 
+    protected final int appId;
+
     protected final boolean exceed;
 
     public UserMealWithExceed(@JsonProperty("id") Integer id,
@@ -47,6 +49,7 @@ public class UserMealWithExceed {
                               @JsonProperty("mail") String mail,
                               @JsonProperty("userName") String userName,
                               @JsonProperty("status") String status,
+                              @JsonProperty("appId") int appId,
                               @JsonProperty("exceed") boolean exceed) {
         this.id = id;
         this.dateTime = dateTime;
@@ -60,6 +63,7 @@ public class UserMealWithExceed {
         this.mail = mail;
         this.userName = userName;
         this.status = status;
+        this.appId = appId;
         this.exceed = exceed;
     }
 
@@ -111,6 +115,10 @@ public class UserMealWithExceed {
         return status;
     }
 
+    public int getAppId() {
+        return appId;
+    }
+
     public boolean isExceed() {
         return exceed;
     }
@@ -130,6 +138,7 @@ public class UserMealWithExceed {
                 ", mail=" + mail +
                 ", userName=" + userName +
                 ", status=" + status +
+                ", appId=" + appId +
                 ", exceed=" + exceed +
                 '}';
     }
